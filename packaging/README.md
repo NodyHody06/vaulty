@@ -41,6 +41,13 @@ Install locally:
 sudo apt install ./dist/vaulty_<version>_<arch>.deb
 ```
 
+APT repository bootstrap (for users):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/Nodyhody06/vaulty/main/scripts/setup-apt.sh | bash
+sudo apt install vaulty
+```
+
 To allow `sudo apt install vaulty`, publish the `.deb` into an APT repository
 (for example with `reprepro` or `aptly`) and add that repository on client machines.
 

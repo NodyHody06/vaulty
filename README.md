@@ -26,6 +26,9 @@ See `CHANGELOG.md` for versioned release notes.
 ## Installers and Packages
 - Build a release archive for your current OS/arch: `./scripts/package-release.sh`
 - Build a Debian package with `dpkg-deb`: `./scripts/package-deb.sh` (Debian/Ubuntu)
+- Debian/Ubuntu one-time repo setup:
+  - `curl -fsSL https://raw.githubusercontent.com/Nodyhody06/vaulty/main/scripts/setup-apt.sh | bash`
+  - then `sudo apt install vaulty`
 - Output files are generated in `dist/` with SHA-256 checksum files.
 - GitHub tag release (`vX.Y.Z`) builds artifacts for:
   - Linux (`x86_64-unknown-linux-gnu`)

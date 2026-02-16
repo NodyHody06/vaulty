@@ -24,6 +24,9 @@ See `CHANGELOG.md` for versioned release notes.
 - The project ships two binary names: `vaulty` (primary) and `terminal-vault` (compat).
 
 ## Installers and Packages
+- Build a release archive for your current OS/arch: `./scripts/package-release.sh`
+- Build a Debian package with `dpkg-deb`: `./scripts/package-deb.sh` (Debian/Ubuntu)
+- Output files are generated in `dist/` with SHA-256 checksum files.
 - GitHub tag release (`vX.Y.Z`) builds artifacts for:
   - Linux (`x86_64-unknown-linux-gnu`)
   - macOS (`x86_64-apple-darwin`, `aarch64-apple-darwin`)

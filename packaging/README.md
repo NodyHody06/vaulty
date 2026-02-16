@@ -29,12 +29,17 @@ The script installs `vaulty` into `$HOME/.local/bin`.
 Build locally:
 
 ```bash
-cargo install cargo-deb --locked
-cargo deb --release
+./scripts/package-deb.sh
 ```
 
 Artifact output:
-- `target/debian/vaulty_<version>_<arch>.deb`
+- `dist/vaulty_<version>_<arch>.deb`
+
+Install locally:
+
+```bash
+sudo apt install ./dist/vaulty_<version>_<arch>.deb
+```
 
 To allow `sudo apt install vaulty`, publish the `.deb` into an APT repository
 (for example with `reprepro` or `aptly`) and add that repository on client machines.

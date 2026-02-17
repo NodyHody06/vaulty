@@ -30,6 +30,20 @@ See `CHANGELOG.md` for versioned release notes.
 - Debian/Ubuntu one-time repo setup:
   - `curl -fsSL https://raw.githubusercontent.com/Nodyhody06/vaulty/main/scripts/setup-apt.sh | bash`
   - then `sudo apt install vaulty`
+- Fedora/RHEL one-time repo setup:
+  - create `/etc/yum.repos.d/vaulty.repo`:
+    ```ini
+    [vaulty]
+    name=Vaulty Repository
+    baseurl=https://nodyhody06.github.io/vaulty/rpm/$basearch
+    enabled=1
+    gpgcheck=0
+    repo_gpgcheck=0
+    ```
+  - then run:
+    - `sudo dnf clean all`
+    - `sudo dnf makecache`
+    - `sudo dnf install vaulty`
 - Output files are generated in `dist/` with SHA-256 checksum files.
 - GitHub tag release (`vX.Y.Z`) builds artifacts for:
   - Linux (`x86_64-unknown-linux-gnu`)

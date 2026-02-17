@@ -33,6 +33,7 @@ See `CHANGELOG.md` for versioned release notes.
 - Fedora/RHEL one-time repo setup:
   - create `/etc/yum.repos.d/vaulty.repo`:
     ```ini
+    sudo tee /etc/yum.repos.d/vaulty.repo >/dev/null <<'EOF'
     [vaulty]
     name=Vaulty Repository
     baseurl=https://nodyhody06.github.io/vaulty/rpm/$basearch

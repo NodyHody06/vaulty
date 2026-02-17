@@ -1,0 +1,13 @@
+Package: vaulty
+Version: 0.1.1
+Architecture: arm64
+Maintainer: Vaulty Maintainers <maintainers@example.com>
+Filename: pool/main/v/vaulty/vaulty_0.1.1_arm64.deb
+Size: 1425404
+MD5sum: 75701287fd0953733fc9e89026ebacf8
+SHA1: 59cb8c95c150deab2a42d4423f49ac2cf80e1632
+SHA256: e3ecc2ae9273c1f03d2d2d89c0b70e873e3fbd3400f52496bc3073e241b6aac8
+Section: utils
+Priority: optional
+Description: Local-first terminal vault for passwords and notes
+

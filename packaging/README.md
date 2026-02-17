@@ -51,6 +51,32 @@ sudo apt install vaulty
 To allow `sudo apt install vaulty`, publish the `.deb` into an APT repository
 (for example with `reprepro` or `aptly`) and add that repository on client machines.
 
+## Fedora/RHEL/openSUSE package (.rpm)
+
+Build locally:
+
+```bash
+./scripts/package-rpm.sh
+```
+
+Artifact output:
+- `dist/vaulty-<version>-1.<arch>.rpm`
+
+Install locally:
+
+```bash
+sudo dnf install ./dist/vaulty-<version>-1.<arch>.rpm
+```
+
+On openSUSE:
+
+```bash
+sudo zypper install ./dist/vaulty-<version>-1.<arch>.rpm
+```
+
+For `dnf install vaulty` from a repository, publish RPM metadata with `createrepo_c`
+and host it as a DNF/YUM repository.
+
 ## Arch Linux package (pacman/AUR)
 
 Template PKGBUILD:

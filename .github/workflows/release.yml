@@ -76,11 +76,31 @@ jobs:
           name: vaulty-deb
           path: dist/*.deb*
 
+  build-rpm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install rpmbuild
+        run: sudo apt-get update && sudo apt-get install -y rpm
+
+      - name: Build .rpm package
+        run: ./scripts/package-rpm.sh
+
+      - name: Upload rpm artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: vaulty-rpm
+          path: dist/*.rpm*
+
   publish-release:
     runs-on: ubuntu-latest
     needs:
       - build-binaries
       - build-deb
+      - build-rpm
     steps:
       - name: Download all artifacts
         uses: actions/download-artifact@v4

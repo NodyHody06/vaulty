@@ -26,6 +26,7 @@ See `CHANGELOG.md` for versioned release notes.
 ## Installers and Packages
 - Build a release archive for your current OS/arch: `./scripts/package-release.sh`
 - Build a Debian package with `dpkg-deb`: `./scripts/package-deb.sh` (Debian/Ubuntu)
+- Build an RPM package with `rpmbuild`: `./scripts/package-rpm.sh` (Fedora/RHEL/openSUSE)
 - Debian/Ubuntu one-time repo setup:
   - `curl -fsSL https://raw.githubusercontent.com/Nodyhody06/vaulty/main/scripts/setup-apt.sh | bash`
   - then `sudo apt install vaulty`
